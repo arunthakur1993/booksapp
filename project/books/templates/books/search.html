@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %} <title>search</title> {% endblock %}
+
+{% block body %}
+<div class ='container'>
+{% if errors %}
+<ul>
+  {% for error in errors %}
+    <li> {{error}} </li>
+  {% endfor %}
+</ul>
+{% endif %}
+<h3>  Enter input to search for a book</h3>
+
+<hr>
+<br />
+<form method ='get' action= '/books/results'>
+    <input type = 'text' name ='w'/>
+    <input type = 'submit' name ='Search' />
+</form>
+</div>
+{% endblock %}

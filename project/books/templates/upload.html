@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title> Book Store</title>
+
+ {% endblock %}
+
+{% block body %}
+<div class = "container">
+  <h2>Upload your books here</h3>
+    <form method= 'post' action = '/upload/'>
+
+      {% csrf_token%}
+      {{form.as_p}}
+      <button type="submit " name ='submit'>Submit</button>
+      
+      </form>
+</div>
+
+{% endblock %}

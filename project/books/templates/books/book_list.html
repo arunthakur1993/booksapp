@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title> Book Store</title>
+
+ {% endblock %}
+
+{% block body %}
+<div class = "container">
+  <h2>Books</h3>
+    <hr>
+    <ol>
+        {% for book in object_list %}
+        <li><strong> {{book.title}}</strong></li>
+        <l1><em>{{book.overview}}</em></li>
+        <br />
+        {% endfor %}
+    </ol>
+  </div>
+{% endblock %}

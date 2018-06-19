@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title> Book Store</title>
+
+ {% endblock %}
+
+{% block body %}
+<div class = "container">
+	<h4> Delete </h4>
+  <form method="post">
+    {% csrf_token %}
+      <p>Are you sure you want to delete "{{ object }}"?</p>
+      <button type="submit" value="submit" />Delete</button>
+      
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title> Book Store</title>
+
+ {% endblock %}
+
+{% block body %}
+<div class = "container">
+<form method = "post" name = '/books/update'>
+  {% csrf_token %}
+    {{form}}
+    <input type = "submit" name = "submit" />
+
+</form>
+</div>
+{% endblock %}
